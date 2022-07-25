@@ -1,6 +1,7 @@
 package com.hectorfortuna.orgs.data
 
 import com.hectorfortuna.orgs.data.model.Product
+import java.math.BigDecimal
 
 class ProductDao {
 
@@ -13,6 +14,11 @@ class ProductDao {
     }
 
     companion object {
-        private val products = mutableListOf<Product>()
+        private val products = mutableListOf<Product>(
+            Product(name = "salada de frutas",
+            description = "Laranja, maçã e uva",
+            value = BigDecimal("19.83")
+            )
+        )
     }
 }
